@@ -71,7 +71,7 @@ Para asegurar la calidad de la información y la estabilidad del sistema, se imp
 
 ## 👤 Autor
 
-**Francisco Olguín** *Desarrollador Backend*
+**Francisco Olguin**
 
 ---
 
