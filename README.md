@@ -31,21 +31,3 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/forohub
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contrasena
 api.security.secret=${JWT_SECRET:tu_clave_secreta}
-
-
-🚀 Endpoints Principales
-Método,Endpoint,Descripción
-POST,/login,Autenticación de usuario y generación de token.
-POST,/topicos,Registro de nuevos temas de discusión.
-GET,/topicos,Listado de temas con soporte de paginación.
-PUT,/topicos,Actualización de título o mensaje de un tópico.
-DELETE,/topicos/{id},Eliminación física de un registro por ID.
-
-
-
-
-
-
-
-
-
