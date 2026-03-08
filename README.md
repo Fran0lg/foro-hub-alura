@@ -1,3 +1,4 @@
+
 # Foro Hub - API REST 🌐
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -31,3 +32,48 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/forohub
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contrasena
 api.security.secret=${JWT_SECRET:tu_clave_secreta}
+
+```
+
+---
+
+## 🔐 Seguridad
+
+La API utiliza un modelo de **autenticación stateless con JWT**.
+
+* **Acceso**: Todas las rutas (excepto `/login`) están protegidas.
+* **Cabecera**: Se requiere enviar el token en el encabezado:
+`Authorization: Bearer <tu_token_aqui>`
+
+---
+
+## 🚀 Endpoints Principales
+
+| Método | Endpoint | Descripción |
+| --- | --- | --- |
+| `POST` | `/login` | Autenticación de usuario y generación de token. |
+| `POST` | `/topicos` | Registro de nuevos temas de discusión. |
+| `GET` | `/topicos` | Listado de temas con soporte de paginación. |
+| `PUT` | `/topicos` | Actualización de título o mensaje de un tópico. |
+| `DELETE` | `/topicos/{id}` | Eliminación física de un registro por ID. |
+
+---
+
+## 🛡️ Validaciones e Integridad
+
+Para asegurar la calidad de la información y la estabilidad del sistema, se implementaron:
+
+* **Integridad de Datos**: Uso de `@Transactional` para garantizar operaciones atómicas.
+* **Manejo de Errores**: Centralizado mediante `@RestControllerAdvice` para retornar códigos HTTP estandarizados (200, 204, 400, 403, 404).
+* **Bean Validation**: Validación estricta de campos obligatorios para evitar datos nulos o vacíos en el repositorio.
+
+---
+
+## 👤 Autor
+
+**Francisco Olguín** *Desarrollador Backend*
+
+---
+
+> Este proyecto fue realizado con fines educativos para el programa Oracle Next Education (ONE) en conjunto con Alura Latam.
+
