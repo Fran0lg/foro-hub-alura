@@ -25,17 +25,12 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 
 1.  **Base de Datos**: Crea una base de datos llamada `forohub` en tu instancia de PostgreSQL.
 2.  **Propiedades**: Configura tus credenciales en el archivo `src/main/resources/application.properties`:
-
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/forohub
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contrasena
 api.security.secret=${JWT_SECRET:tu_clave_secreta}
 
-Gemini dijo
-¡Claro que sí, Francisco! He transformado tu información en un archivo README.md profesional, con una estructura clara, badges (insignias) para las tecnologías y una organización visual que hará que tu portafolio destaque en GitHub.
-
-Aquí tienes el código listo para copiar y pegar:
 
 Markdown
 # Foro Hub - API REST 🌐
