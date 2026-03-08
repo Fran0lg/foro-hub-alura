@@ -25,24 +25,15 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 
 1.  **Base de Datos**: Crea una base de datos llamada `forohub` en tu instancia de PostgreSQL.
 2.  **Propiedades**: Configura tus credenciales en el archivo `src/main/resources/application.properties`:
+
+```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/forohub
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contrasena
 api.security.secret=${JWT_SECRET:tu_clave_secreta}
 
 
-🔐 Seguridad
-La API utiliza un modelo de autenticación stateless con JWT.
-
-Acceso: Todas las rutas (excepto /login) están protegidas.
-
-Cabecera: Se requiere enviar el token en el encabezado:
-Authorization: Bearer <tu_token_aqui>
-
-
-
 🚀 Endpoints Principales
-
 Método,Endpoint,Descripción
 POST,/login,Autenticación de usuario y generación de token.
 POST,/topicos,Registro de nuevos temas de discusión.
